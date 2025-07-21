@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; padding: 10px; width: 320px; }
+    select { margin-left: 10px; }
+    .tab-entry { margin-bottom: 5px; }
+    .section { margin-top: 20px; }
+    button { margin-left: 5px; }
+    textarea { width: 100%; height: 80px; margin-top: 5px; }
+    #sortSelect { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h3>Tab Butler</h3>
+
+  <div class="section">
+    <label for="sortSelect">Сортировка:</label>
+    <select id="sortSelect">
+      <option value="title">По заголовку</option>
+      <option value="lastAccess">По активности</option>
+      <option value="priority">По приоритету</option>
+    </select>
+  </div>
+
+  <div id="tabs"></div>
+
+  <div class="section">
+    <h4>🔄 Восстановить вкладки</h4>
+    <div id="closed-tabs"></div>
+    <button id="restoreAllBtn">Восстановить все</button>
+  </div>
+
+  <div class="section">
+    <h4>⬆️ Экспорт / ⬇️ Импорт</h4>
+    <button id="exportBtn">Экспортировать</button>
+    <button id="importBtn">Импортировать</button>
+    <textarea id="dataArea" placeholder="JSON данные..." spellcheck="false"></textarea>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
